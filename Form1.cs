@@ -1,6 +1,8 @@
 ﻿using AppTesteMTS.View;
 using System;
 using System.Configuration;
+using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace AppTesteMTS
@@ -10,17 +12,13 @@ namespace AppTesteMTS
         public Form1()
         {
             InitializeComponent();
+
             UtilAPI.ConfigureClient(ConfigurationManager.AppSettings["URLAPIMetasis"]);
         }
 
         private void bProduto_Click(object sender, EventArgs e)
         {
-            OpenFormInPage(new ViewProduto(), NewPage());
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            OpenFormInPage(new ViewProduto(), tabControl1.TabPages[tabControl1.SelectedIndex]);
+            OpenFormInPage(new ViewProduto(), ClosableTabC.TabPages[ClosableTabC.SelectedIndex]);
         }
 
         private void OpenFormInPage(Form aForm, TabPage aPage)
@@ -37,16 +35,18 @@ namespace AppTesteMTS
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            NewPage();
-        }
+        //private TabPage NewPage()
+        //{
+        //    //ClosableTabC.TabPages.Add("Escolha uma tela");
+        //    //ClosableTabC.SelectTab(ClosableTabC.TabPages.Count - 1);
+        //    //return ClosableTabC.TabPages[ClosableTabC.SelectedIndex];
+        //    return ClosableTabC.NewPage(this);
+        //}
 
-        private TabPage NewPage()
+
+        private void bNovaAba_Click(object sender, EventArgs e)
         {
-            tabControl1.TabPages.Add("Escolha uma tela");
-            tabControl1.SelectTab(tabControl1.TabPages.Count - 1);
-            return tabControl1.TabPages[tabControl1.SelectedIndex];
+            ClosableTabC.NewPage(this);
         }
     }
 }

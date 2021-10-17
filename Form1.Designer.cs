@@ -31,18 +31,17 @@ namespace AppTesteMTS
         {
             this.pnLeft = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bNovaAba = new System.Windows.Forms.Button();
             this.bProduto = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnTab = new System.Windows.Forms.Panel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ClosableTabC = new AppTesteControlLibrary.ClosableTabControl();
+            this.abaPrincipal = new System.Windows.Forms.TabPage();
+            this.abaAdd = new System.Windows.Forms.TabPage();
             this.pnLeft.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.pnTab.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.ClosableTabC.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnLeft
@@ -58,7 +57,7 @@ namespace AppTesteMTS
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Controls.Add(this.bNovaAba);
             this.flowLayoutPanel1.Controls.Add(this.bProduto);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
@@ -68,15 +67,15 @@ namespace AppTesteMTS
             this.flowLayoutPanel1.Size = new System.Drawing.Size(110, 667);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
-            // button1
+            // bNovaAba
             // 
-            this.button1.Location = new System.Drawing.Point(18, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Nova Aba";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.bNovaAba.Location = new System.Drawing.Point(18, 8);
+            this.bNovaAba.Name = "bNovaAba";
+            this.bNovaAba.Size = new System.Drawing.Size(75, 23);
+            this.bNovaAba.TabIndex = 1;
+            this.bNovaAba.Text = "Nova Aba";
+            this.bNovaAba.UseVisualStyleBackColor = true;
+            this.bNovaAba.Click += new System.EventHandler(this.bNovaAba_Click);
             // 
             // bProduto
             // 
@@ -99,44 +98,44 @@ namespace AppTesteMTS
             // 
             // pnTab
             // 
-            this.pnTab.Controls.Add(this.tabControl1);
+            this.pnTab.Controls.Add(this.ClosableTabC);
             this.pnTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnTab.Location = new System.Drawing.Point(120, 0);
             this.pnTab.Name = "pnTab";
             this.pnTab.Size = new System.Drawing.Size(739, 667);
             this.pnTab.TabIndex = 6;
             // 
-            // tabControl1
+            // ClosableTabC
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(739, 667);
-            this.tabControl1.TabIndex = 4;
+            this.ClosableTabC.Controls.Add(this.abaPrincipal);
+            this.ClosableTabC.Controls.Add(this.abaAdd);
+            this.ClosableTabC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClosableTabC.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
+            this.ClosableTabC.Location = new System.Drawing.Point(0, 0);
+            this.ClosableTabC.Name = "ClosableTabC";
+            this.ClosableTabC.Padding = new System.Drawing.Point(11, 3);
+            this.ClosableTabC.SelectedIndex = 0;
+            this.ClosableTabC.Size = new System.Drawing.Size(739, 667);
+            this.ClosableTabC.TabIndex = 5;
             // 
-            // tabPage1
+            // abaPrincipal
             // 
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(731, 639);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.abaPrincipal.Location = new System.Drawing.Point(4, 24);
+            this.abaPrincipal.Name = "abaPrincipal";
+            this.abaPrincipal.Padding = new System.Windows.Forms.Padding(3);
+            this.abaPrincipal.Size = new System.Drawing.Size(731, 639);
+            this.abaPrincipal.TabIndex = 0;
+            this.abaPrincipal.Text = "Escolha uma tela";
+            this.abaPrincipal.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // abaAdd
             // 
-            this.button2.Location = new System.Drawing.Point(40, 27);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Produto";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.abaAdd.Location = new System.Drawing.Point(4, 24);
+            this.abaAdd.Name = "abaAdd";
+            this.abaAdd.Padding = new System.Windows.Forms.Padding(3);
+            this.abaAdd.Size = new System.Drawing.Size(731, 639);
+            this.abaAdd.TabIndex = 1;
+            this.abaAdd.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -150,8 +149,7 @@ namespace AppTesteMTS
             this.pnLeft.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.pnTab.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.ClosableTabC.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -160,13 +158,13 @@ namespace AppTesteMTS
 
         private System.Windows.Forms.Panel pnLeft;
         private System.Windows.Forms.Panel pnTab;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bNovaAba;
         private System.Windows.Forms.Button bProduto;
-        private System.Windows.Forms.Button button2;
+        private AppTesteControlLibrary.ClosableTabControl ClosableTabC;
+        private System.Windows.Forms.TabPage abaPrincipal;
+        private System.Windows.Forms.TabPage abaAdd;
     }
 }
 
